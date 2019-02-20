@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk
+FROM openjdk:8-jre
 
 WORKDIR /app
 
@@ -14,8 +14,8 @@ RUN mkdir -p ${ILSERVER_DATA_PATH} ${ILSERVER_ILIASDATA_PATH} ${ILSERVER_INDEX_P
     && chmod 775 ${ILSERVER_INDEX_PATH}
 VOLUME ${ILSERVER_INDEX_PATH}
 
-ENV ILIAS_VERSION=5.1.28
-ENV ILIAS_SHA1=20a99f8a44dba773fbc008f7585ac75fe3eb14b3
+ENV ILIAS_VERSION=5.3.13
+ENV ILIAS_SHA1=da29084ae12c38f29ec732661487c5510132b2fd
 
 RUN curl -o ilias.tar.gz -SL https://github.com/ILIAS-eLearning/ILIAS/archive/v${ILIAS_VERSION}.tar.gz \
     && echo "$ILIAS_SHA1 *ilias.tar.gz" | sha1sum -c - \
