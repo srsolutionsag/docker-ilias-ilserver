@@ -21,8 +21,7 @@ RUN curl -o ilias.tar.gz -SL https://github.com/ILIAS-eLearning/ILIAS/archive/v$
     && echo "$ILIAS_SHA1 *ilias.tar.gz" | sha1sum -c - \
     && tar -xzf ilias.tar.gz --strip-components=1 --wildcards \
         */${ILSERVER_JAR} \
-        */*/*/LuceneObjectDefinition.xml \
-        */*/*/LuceneFileListDataSource.xml \
+        */*/*/*.xml \
     && rm ilias.tar.gz
 
 COPY docker-ilserver-entrypoint /usr/local/bin/
