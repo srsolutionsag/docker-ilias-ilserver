@@ -24,7 +24,7 @@ datadir = $ILSERVER_ILIASDATA_PATH
 ILSERVER_PROPERTIES="
 [Server]
 IpAddress = 0.0.0.0
-Port = 11111
+Port = $ILSERVER_PORT
 IndexPath = $ILSERVER_INDEX_PATH
 LogFile = /dev/stdout
 LogLevel = $ILSERVER_LOGLEVEL
