@@ -1,4 +1,6 @@
-FROM openjdk:8-jre
+ARG JAVA_VERSION
+
+FROM openjdk:${JAVA_VERSION}
 
 WORKDIR /app
 
