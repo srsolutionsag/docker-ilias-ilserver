@@ -17,8 +17,8 @@ VOLUME ${ILSERVER_INDEX_PATH}
 
 EXPOSE $ILSERVER_PORT
 
-ENV ILIAS_VERSION=5.4.0
-ENV ILIAS_SHA1=f50e413ce823918b2649bfe73ef959cf57575710
+ENV ILIAS_VERSION=5.4.1
+ENV ILIAS_SHA1=26eab62273d96174c96203577a798ec0e89dd661
 
 RUN curl -o ilias.tar.gz -SL https://github.com/ILIAS-eLearning/ILIAS/archive/v${ILIAS_VERSION}.tar.gz \
     && echo "$ILIAS_SHA1 *ilias.tar.gz" | sha1sum -c - \
