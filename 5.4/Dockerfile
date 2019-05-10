@@ -19,7 +19,8 @@ VOLUME ${ILSERVER_INDEX_PATH}
 
 EXPOSE $ILSERVER_PORT
 
-COPY --from=ilias /var/www/html/ ./
+COPY --from=ilias /var/www/html/Modules ./Modules
+COPY --from=ilias /var/www/html/Services ./Services
 
 COPY docker-ilserver-entrypoint /usr/local/bin/
 
