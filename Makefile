@@ -3,9 +3,9 @@ IMAGE_NAME ?= sturai/ilias-ilserver
 IMAGES = 5.2/openjdk8-jre \
 	5.3/openjdk8-jre \
 	5.4/openjdk8-jre \
-	6-beta/openjdk8-jre
+	6/openjdk8-jre
 
-LATEST = 5.4/openjdk8-jre
+LATEST = 6/openjdk8-jre
 
 variant = $$(basename $1)
 branch  = $$(basename $$(dirname $1))
