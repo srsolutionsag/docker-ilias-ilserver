@@ -1,6 +1,6 @@
 ARG JAVA_VERSION
 
-FROM sturai/ilias:5.4 AS ilias
+FROM sturai/ilias:6-beta AS ilias
 
 FROM openjdk:${JAVA_VERSION}
 
