@@ -1,6 +1,6 @@
 IMAGE_NAME ?= sturai/ilias-ilserver
 
-IMAGES = 5.2/openjdk8-jre \
+IMAGES = \
 	5.3/openjdk8-jre \
 	5.4/openjdk8-jre \
 	6/openjdk8-jre
