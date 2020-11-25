@@ -3,7 +3,9 @@ IMAGE_NAME ?= sturai/ilias-ilserver
 IMAGES = \
 	5.3/openjdk8-jre \
 	5.4/openjdk8-jre \
-	6/openjdk8-jre
+	6/openjdk8-jre \
+	7-beta/openjdk8-jre \
+	7-beta/openjdk11-jre
 
 LATEST = 6/openjdk8-jre
 
