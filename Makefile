@@ -45,4 +45,4 @@ tag: $(LATEST)
 
 .PHONY: push
 push:
-	docker push $(IMAGE_NAME)
+	docker push -a $(IMAGE_NAME)
