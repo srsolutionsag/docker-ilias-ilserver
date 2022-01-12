@@ -23,7 +23,7 @@ $(IMAGES):
 	@branch=$(call branch,$@)
 	@java=$(call java,$$variant)
 	@echo "Building $(IMAGE_NAME):$$branch-$$variant"
-	docker build --rm --pull \
+	docker build --rm \
 		-f $$branch/Dockerfile \
 		--build-arg JAVA_VERSION=$$java \
 		-t $(IMAGE_NAME):$$branch-$$variant \
