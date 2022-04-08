@@ -22,6 +22,8 @@ $(IMAGES):
 	@variant=$(call variant,$@)
 	@branch=$(call branch,$@)
 	@java=$(call java,$$variant)
+	@echo "Pulling image openjdk:$$java"
+	docker pull openjdk:$$java
 	@echo "Building $(IMAGE_NAME):$$branch-$$variant"
 	docker build --rm \
 		-f $$branch/Dockerfile \
