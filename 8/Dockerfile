@@ -1,6 +1,6 @@
 ARG JAVA_VERSION
 
-FROM srsolutions/ilias:8-beta AS ilias
+FROM srsolutions/ilias:8 AS ilias
 
 FROM openjdk:${JAVA_VERSION}
 
