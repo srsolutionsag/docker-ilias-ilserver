@@ -1,7 +1,6 @@
 IMAGE_NAME ?= srsolutions/ilias-ilserver
 
 IMAGES = \
-	6/openjdk8-jre \
 	7/openjdk8-jre \
 	7/openjdk11-jre \
 	8/openjdk11-jre \
