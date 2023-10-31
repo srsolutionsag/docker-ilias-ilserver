@@ -1,6 +1,7 @@
 ARG JAVA_VERSION
+ARG ILIAS_BRANCH
 
-FROM srsolutions/ilias:8 AS ilias
+FROM srsolutions/ilias:${ILIAS_BRANCH} AS ilias
 
 FROM openjdk:${JAVA_VERSION}
 

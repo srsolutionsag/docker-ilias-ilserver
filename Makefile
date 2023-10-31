@@ -28,6 +28,7 @@ $(IMAGES):
 	docker build --rm \
 		-f $$branch/Dockerfile \
 		--build-arg JAVA_VERSION=$$java \
+		--build-arg ILIAS_BRANCH=$$branch \
 		-t $(IMAGE_NAME):$$branch-$$variant \
 		.
 
