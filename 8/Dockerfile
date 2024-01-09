@@ -3,7 +3,7 @@ ARG ILIAS_BRANCH
 
 FROM srsolutions/ilias:${ILIAS_BRANCH} AS ilias
 
-FROM openjdk:${JAVA_VERSION}
+FROM eclipse-temurin:${JAVA_VERSION}
 
 WORKDIR /app
 
