@@ -3,12 +3,19 @@ ARG ILIAS_BRANCH
 
 FROM srsolutions/ilias:${ILIAS_BRANCH} AS ilias
 
+FROM maven:3 AS maven
+
+WORKDIR /build
+
+COPY --from=ilias /var/www/html/Services/WebServices/RPC/lib/ .
+RUN mvn install
+
 FROM eclipse-temurin:${JAVA_VERSION}
 
 WORKDIR /app
 
 ENV ILSERVER_PORT=11111
-ENV ILSERVER_JAR=Services/WebServices/RPC/lib/ilServer.jar
+ENV ILSERVER_JAR=ilServer.jar
 
 ENV ILSERVER_DATA_PATH=data
 ENV ILSERVER_ILIASDATA_PATH=iliasdata
@@ -20,6 +27,7 @@ VOLUME ${ILSERVER_INDEX_PATH}
 
 EXPOSE $ILSERVER_PORT
 
+COPY --from=maven /build/target/ilServer.jar $ILSERVER_JAR
 COPY --from=ilias /var/www/html/Modules ./Modules
 COPY --from=ilias /var/www/html/Services ./Services
 
