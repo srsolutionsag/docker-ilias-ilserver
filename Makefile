@@ -2,8 +2,6 @@ IMAGE_NAME ?= srsolutions/ilias-ilserver
 
 PLATFORM ?= linux/amd64,linux/arm64
 OUTPUT ?= type=image,push=true
-CACHE_FROM ?= type=local,src=.cache
-CACHE_TO ?= type=local,dest=.cache
 
 IMAGES = \
 	7/openjdk8-jre \
@@ -40,8 +38,6 @@ $(IMAGES):
 		--build-arg JAVA_VERSION=$$java \
 		--build-arg ILIAS_BRANCH=$$branch \
 		-t $(IMAGE_NAME):$$branch-$$variant \
-		--cache-from $(CACHE_FROM) \
-		--cache-to $(CACHE_TO) \
 		--output $(OUTPUT) \
 		.
 
