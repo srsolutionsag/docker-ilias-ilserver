@@ -31,13 +31,14 @@ $(IMAGES):
 	echo "Pulling image eclipse-temurin:$$java"
 	docker pull eclipse-temurin:$$java
 	echo "Building $(IMAGE_NAME):$$branch-$$variant"
-	docker buildx build --platform $(PLATFORM) --pull \
-		-f $$branch/Dockerfile \
+	docker buildx build \
+		--pull \
+		--platform $(PLATFORM) \
 		--build-arg JAVA_VERSION=$$java \
 		--build-arg ILIAS_BRANCH=$$branch \
 		-t $(IMAGE_NAME):$$branch-$$variant \
 		--output $(OUTPUT) \
-		.
+		$$branch
 
 .PHONY: tag
 tag:
