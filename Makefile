@@ -4,7 +4,6 @@ PLATFORM ?= linux/amd64,linux/arm64
 OUTPUT ?= type=image,push=true
 
 IMAGES = \
-	8/openjdk11-jre \
 	9/openjdk11-jre \
 	9/openjdk17-jre \
 	10/openjdk11-jre \
