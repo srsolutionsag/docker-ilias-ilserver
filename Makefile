@@ -13,7 +13,7 @@ IMAGES = \
 	11/openjdk17-jre \
 	11/openjdk21-jre
 
-LATEST = 10/openjdk21-jre
+LATEST = 11/openjdk21-jre
 
 variant = $$(basename $1)
 branch  = $$(basename $$(dirname $1))
