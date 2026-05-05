@@ -8,7 +8,10 @@ IMAGES = \
 	9/openjdk17-jre \
 	10/openjdk11-jre \
 	10/openjdk17-jre \
-	10/openjdk21-jre
+	10/openjdk21-jre \
+	11/openjdk11-jre \
+	11/openjdk17-jre \
+	11/openjdk21-jre
 
 LATEST = 10/openjdk21-jre
 
